@@ -1,0 +1,18 @@
+{
+  "name": "adib-lang-playground",
+  "type": "module",
+  "collaborators": [
+    "Adib Fahimi <adibfahi@gmail.com>"
+  ],
+  "version": "0.1.0",
+  "files": [
+    "adib_lang_playground_bg.wasm",
+    "adib_lang_playground.js",
+    "adib_lang_playground.d.ts"
+  ],
+  "main": "adib_lang_playground.js",
+  "types": "adib_lang_playground.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <title>Adib Lang Playground</title>
+  </head>
+  <body class="text-white bg-black">
+    <div class="flex gap-2 justify-between">
+      <div id="container" class="w-1/2 h-screen"></div>
+
+      <div class="p-4 w-1/2 h-full text-white bg-black">
+        <button
+          class="px-2 mb-2 text-lg font-bold text-white bg-blue-500 rounded-md py-[3px]"
+          onclick="runCode()"
+        >
+          Run Code
+        </button>
+        <div id="log" class="overflow-auto"></div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/monaco-editor@latest/min/vs/loader.js"></script>
+
+    <script type="module">
+      import init, { evaluate_source_code } from "./adib_lang_playground.js";
+
+      async function run(a) {
+        await init();
+        evaluate_source_code(a);
+      }
+
+      window.run = run;
+    </script>
+    <script src="./editor.js"></script>
+  </body>
+</html>
